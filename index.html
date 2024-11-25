@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styleintro.css">
 </head>
 <body>
+    <header class="head-class">
+        <h1>
+            Rock Paper Scissor 
+        </h1>
+    </header>
+    <div class="main-img">
+        <div class="dis-img">
+            <img src="rock.png">
+        </div>
+        <div class="dis-img">
+            <img src="paper.png">
+        </div>
+        <div class="dis-img">
+            <img src="scissors.png">
+        </div>
+    </div>
 
-    <h1>Rock Paper Scissor</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="rock.png"/>
-        </div>
-        <div class="choice" id="paper">
-            <img src="paper.png"/>
-        </div>
-        <div class="choice" id="Scissor">
-            <img src="scissors.png"/>
+    <div class="rule-head">
+        <h2>Game Rules :</h2>
+    </div>
+    <div class="rule-list">
+        <ul id="rules">
+            <li>Rock Beats Scissor</li>
+            <li>Scissor Beats Paper</li>
+            <li>Paper Beats Rock</li>
+        </ul>
+    </div>
+
+    <div class="page-change" >
+        <div class="transfer">
+            <a href="second.html" id="transfer">Let's Play =></a>
         </div>
     </div>
 
-    <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p>You</p>
-        </div>
-        <div class="score">
-            <p id="comp-score">0</p>
-            <p>comp</p>
-        </div>
-    </div>
-    <div class="msg-container">
-        <p id="msg">Play Your Move</p>
-    </div>
-
-
-    <script src="work.js"></script>
+    <script src="scriptintro.js"></script>
 </body>
 </html>

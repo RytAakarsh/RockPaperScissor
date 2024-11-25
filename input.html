@@ -19,29 +19,44 @@
     </div>
 
     <script>
-       document.getElementById("nameForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission reload
-    const username = document.getElementById("username").value;
-    if (username) {
-        localStorage.setItem("playerName", username); // Save name
-        window.location.href = "game.html"; // Redirect to the game
-    } else {
-        alert("Please enter your name.");
-    }
-    // Retrieve the player's name
-const playerName = localStorage.getItem("playerName");
+//        document.getElementById("nameForm").addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent form submission reload
+//     const username = document.getElementById("username").value;
+//     if (username) {
+//         localStorage.setItem("playerName", username); // Save name
+//         window.location.href = "game.html"; // Redirect to the game
+//     } else {
+//         alert("Please enter your name.");
+//     }
 
-if (playerName) {
-    // Display the name dynamically
-    const playerDisplay = document.getElementById("playerNameDisplay");
-    if (playerDisplay) playerDisplay.textContent = `Welcome, ${playerName}!`;
-} else {
-    // Redirect to input page if name is missing
-    alert("Please enter your name first!");
-    window.location.href = "input.html";
-}
+  
 
-});
+//     // Retrieve the player's name
+// const playerName = localStorage.getItem("playerName");
+
+// if (playerName) {
+//     // Display the name dynamically
+//     const playerDisplay = document.getElementById("playerNameDisplay");
+//     if (playerDisplay) playerDisplay.textContent = `Welcome, ${playerName}!`;
+// } else {
+//     // Redirect to input page if name is missing
+//     alert("Please enter your name first!");
+//     window.location.href = "input.html";
+// }
+
+// });
+
+ // JavaScript for saving user name
+ document.getElementById("nameForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value.trim();
+            if (username) {
+                localStorage.setItem("playerName", username); // Save name to localStorage
+                window.location.href = "index.html"; // Redirect to the game page
+            } else {
+                alert("Please enter a valid name!");
+            }
+        });
 
     </script>
 </body>

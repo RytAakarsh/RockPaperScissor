@@ -8,6 +8,20 @@ const playerName = localStorage.getItem("playerName");
 const paraname = document.querySelector("#para-name");
 paraname.innerText = playerName;
 
+// Retrieve the player's name
+// const playerName = localStorage.getItem("playerName");
+
+if (playerName) {
+    // Display the name dynamically
+    const playerDisplay = document.getElementById("playerNameDisplay");
+    if (playerDisplay) playerDisplay.textContent = `Welcome, ${playerName}!`;
+} else {
+    // Redirect to input page if name is missing
+    alert("Please enter your name first!");
+    window.location.href = "input.html";
+}
+
+
 const gencompchoice = () => {
     const option = ["rock","paper","scissors"];
     const randIdx = Math.floor(Math.random()*3);

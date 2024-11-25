@@ -19,21 +19,17 @@
     </div>
 
     <script>
-        const form = document.getElementById("nameForm");
-        const startGameLink = document.getElementById("startGameLink");
+       document.getElementById("nameForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission reload
+    const username = document.getElementById("username").value;
+    if (username) {
+        localStorage.setItem("playerName", username); // Save name
+        window.location.href = "game.html"; // Redirect to the game
+    } else {
+        alert("Please enter your name.");
+    }
+});
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            const username = document.getElementById("username").value;
-
-            if (username) {
-                localStorage.setItem("playerName", username); // Save name in localStorage
-                alert("Name saved! You can now start the game.");
-                startGameLink.href = "game.html"; // Enable the link to the game
-            } else {
-                alert("Please enter your name.");
-            }
-        });
     </script>
 </body>
 </html>

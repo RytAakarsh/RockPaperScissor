@@ -4,6 +4,9 @@ const choice = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 const userscorepara = document.querySelector("#user-score");
 const compscorepara = document.querySelector("#comp-score");
+const playerName = localStorage.getItem("playerName");
+const paraname = document.querySelector("#para-name");
+paraname.innerText = playerName;
 
 const gencompchoice = () => {
     const option = ["rock","paper","scissors"];
@@ -20,14 +23,14 @@ const showWinner = (userwin , userchoice , cmpchoice) => {
         console.log("you win !");
         userscore++;
         userscorepara.innerText = userscore;
-        msg.innerText = `You Win :) Your ${userchoice} beats ${cmpchoice}`;
+        msg.innerText = `${playerName} Win :) Your ${userchoice} beats ${cmpchoice}`;
         msg.style.backgroundColor = "Green";
     }
     else {
         console.log("You Lose!");
         compscore++;
         compscorepara.innerText = compscore;
-        msg.innerText = `You Lose :( ${cmpchoice} beats Your ${userchoice} `;
+        msg.innerText = `${playerName} Lose :( ${cmpchoice} beats Your ${userchoice} `;
         msg.style.backgroundColor = "red";
     }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Name</title>
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <div class="div-head">Enter Your Name :</div>
+    <form id="nameForm">
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Save Name</button>
+    </form>
+    <div class="next-page">
+        <p><a id="startGameLink" href="second.html">Let's Play =></a></p>
+    </div>
+
+    <script>
+        const form = document.getElementById("nameForm");
+        const startGameLink = document.getElementById("startGameLink");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+
+            if (username) {
+                localStorage.setItem("playerName", username); // Save name in localStorage
+                alert("Name saved! You can now start the game.");
+                startGameLink.href = "game.html"; // Enable the link to the game
+            } else {
+                alert("Please enter your name.");
+            }
+        });
+    </script>
+</body>
+</html>

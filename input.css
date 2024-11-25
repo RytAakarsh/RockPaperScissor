@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:  #FFA62B;
+}
+h1 {
+    background-color: #081b31;
+    color: white;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    font-family: cursive;
+}
+.div-head {
+    margin-top: 5rem;
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nameForm {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label {
+    margin-right: 10px;
+    font-size: 2rem;
+    font-family: cursive;
+    font-weight: bold;
+}
+input {
+    font-size: 2rem;
+    font-family: cursive;
+    height:30px;
+    width: 480px;
+    border-radius: 1rem;
+}
+input:hover {
+    border: solid 3px orangered;
+}
+button {
+    font-size: 15px;
+    font-family: cursive;
+    border-radius: 1rem;
+    margin-left: 5px;
+    height: 30px;
+    width: 100px;
+}
+button:hover {
+    border: solid 3px brown;
+}
+.next-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    background-color: #081b31;
+    border-radius: 1rem;
+    font-size: 25px;
+}
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+p:hover {
+    border: solid 3px #fff;
+}

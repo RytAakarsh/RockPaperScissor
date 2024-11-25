@@ -2,25 +2,31 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #FFA62B;
+}
 h1 {
     background-color: #081b31;
     color: white;
-    height: 5rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 5rem;
+    font-family: cursive;
 }
+
 .choice {
-    height: 165px;
-    width: 165px;
+    height: 215px;
+    width: 215px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 img {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -29,7 +35,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .choice:hover {
     background-color: #081b31;
@@ -39,9 +45,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4rem;
     gap: 5rem;
-    margin-top: 3rem;
+    font-family: cursive;
+    font-weight: bolder;
+    margin-top: 1rem;
 }
 .msg-container {
     margin-top: 3rem;

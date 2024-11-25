@@ -71,5 +71,6 @@ a {
 }
 .transfer:hover {
     border: solid 2px #fff;
+    cursor: pointer;
 
 }
